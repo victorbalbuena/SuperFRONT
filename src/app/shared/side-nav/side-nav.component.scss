@@ -1,0 +1,51 @@
+.aside {
+  background-color: #4773da;
+  max-height: auto;
+  width: 16rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  &-ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+
+  &-item {
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    border-radius: 3rem;
+    padding: 0.8rem;
+  }
+
+  &-item:hover {
+    background-color: #3960bc;
+  }
+}
+
+@media (min-width: 768px) {
+  .aside {
+    max-width: 15rem;
+    height: 100vh;
+    top: 0;
+    position: sticky;
+  }
+}
+
+@media (min-width: 768px) {
+  .aside-ul {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

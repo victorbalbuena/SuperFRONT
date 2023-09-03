@@ -1,0 +1,18 @@
+.container {
+  max-height: 100vh;
+}
+
+.app-container {
+  background-color: var(--white);
+  margin: 2rem;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    flex-grow: 1;
+  }
+}
+
+.responsive {
+  display: flex;
+}
