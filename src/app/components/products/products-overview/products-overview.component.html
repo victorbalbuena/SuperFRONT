@@ -21,7 +21,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let producto of productos">
-          <td (click)="editProducto(producto)">{{ producto.nombre }}</td>
+          <td class="select-option" (click)="editProducto(producto)">
+            {{ producto.nombre }}
+          </td>
           <td>{{ producto.precioUnitario }}</td>
           <td>{{ producto.descripcion }}</td>
           <td>{{ producto.existencias }}</td>

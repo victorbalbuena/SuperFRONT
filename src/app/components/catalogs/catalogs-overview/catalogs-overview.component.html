@@ -17,7 +17,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let catalogo of catalogos">
-          <td (click)="editCatalogo(catalogo)">{{ catalogo.nombre }}</td>
+          <td class="select-option" (click)="editCatalogo(catalogo)">
+            {{ catalogo.nombre }}
+          </td>
           <td>{{ catalogo.descripcion }}</td>
         </tr>
       </tbody>
