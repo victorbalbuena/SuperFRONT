@@ -29,6 +29,14 @@
         placeholder="descripción"
       />
     </div>
+    <div *ngIf="catalogo">
+      Catálogo:
+      <select [(ngModel)]="producto.catalogoModel">
+        <option *ngFor="let catalog of catalogo" [ngValue]="catalog">
+          {{ catalog.nombre }}
+        </option>
+      </select>
+    </div>
   </div>
 
   <div class="btn-container">
@@ -48,4 +56,8 @@
     </button>
     <button class="btn btn-cancel" (click)="cancel()">Cancel</button>
   </div>
+
+  <!-- <div *ngIf="producto">
+    {{ producto | json }}
+  </div> -->
 </section>

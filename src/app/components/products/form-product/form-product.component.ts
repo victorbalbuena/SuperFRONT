@@ -1,7 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { ProductosService } from 'src/app/services/productos.service';
 import { producto } from 'src/core/_models/producto';
 import { ToastrService } from 'ngx-toastr';
+import { catalogo } from 'src/core/_models/catalogo';
 
 @Component({
   selector: 'app-form-product',
@@ -11,13 +18,19 @@ import { ToastrService } from 'ngx-toastr';
 export class FormProductComponent implements OnInit {
   @Input()
   producto?: producto;
+  @Input()
+  catalogo?: catalogo[];
+
+  catalogoSeleccionado?: catalogo;
 
   constructor(
     private productoHttp: ProductosService,
     private toastr: ToastrService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(catalogo);
+  }
 
   updateProducto(producto: producto) {
     this.productoHttp.updateProducto(producto).subscribe(() => {

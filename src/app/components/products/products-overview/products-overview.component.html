@@ -1,11 +1,11 @@
 <section class="products">
   <h2 class="title">Productos</h2>
 
-  <!-- <div class="option">
-    <button class="btn-agregar" routerLink="/products/create">
+  <div class="option">
+    <button class="btn-agregar" (click)="initNewProducto()">
       Agregar producto
     </button>
-  </div> -->
+  </div>
 
   <div class="products-container">
     <table class="products-table" id="customers">
@@ -16,7 +16,7 @@
           <th>Descripción</th>
           <th>Existencias</th>
           <th>Catálogo</th>
-          <th>Delete</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,7 @@
           <td class="select-option" (click)="editProducto(producto)">
             {{ producto.nombre }}
           </td>
-          <td>{{ producto.precioUnitario }}</td>
+          <td>{{ producto.precioUnitario?.toFixed(2) }}</td>
           <td>{{ producto.descripcion }}</td>
           <td>{{ producto.existencias }}</td>
           <td>{{ producto.catalogoModel?.nombre }}</td>
@@ -38,5 +38,8 @@
     </table>
   </div>
 
-  <app-form-product [producto]="productoToEdit"></app-form-product>
+  <app-form-product
+    [producto]="productoToEdit"
+    [catalogo]="catalogos"
+  ></app-form-product>
 </section>
