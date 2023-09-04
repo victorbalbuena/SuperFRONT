@@ -1,0 +1,19 @@
+.products {
+  padding-top: 2rem;
+  max-width: 80vw;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #ffffff;
+
+  &-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #3461c9;
+}

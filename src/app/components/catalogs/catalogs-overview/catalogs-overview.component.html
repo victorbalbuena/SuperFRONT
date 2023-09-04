@@ -1,3 +1,32 @@
 <section class="catalogs">
-  <h2 class="title">Catalogs</h2>
+  <h2 class="title">Catálogos</h2>
+
+  <div class="option">
+    <button class="btn-agregar" (click)="initNewCatalogo()">
+      Agregar catálogo
+    </button>
+  </div>
+
+  <div class="catalogs-container">
+    <table class="products-table" id="customers">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let catalogo of catalogos">
+          <td (click)="editCatalogo(catalogo)">{{ catalogo.nombre }}</td>
+          <td>{{ catalogo.descripcion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-form-catalog [catalogo]="catalogoToEdit"></app-form-catalog>
+
+  <!-- <div *ngIf="catalogos">
+    {{ catalogos | json }}
+  </div> -->
 </section>

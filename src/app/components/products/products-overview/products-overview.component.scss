@@ -1,12 +1,100 @@
 .products {
+  padding-top: 2rem;
   max-width: 80vw;
   margin: 0 auto;
   height: 100%;
   background-color: #ffffff;
+
+  &-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
   color: #3461c9;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+// #customers tr:hover {
+//   background-color: #ddd;
+// }
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3461c9;
+  color: white;
+}
+
+.btn-editar {
+  border: none;
+  background-color: #1c9440;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  color: #fff;
+  margin-right: 4px;
+  transition: 0.2s all ease-in;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #0c6727;
+  }
+}
+
+.btn-eliminar {
+  border: none;
+  background-color: #d44242;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  color: #fff;
+  transition: 0.2s all ease-in;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #9e1f1f;
+  }
+}
+
+.btn-agregar {
+  border: none;
+  background-color: #3461c9;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 0.2s all ease-in;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #234dad;
+  }
+}
+
+.option {
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  margin: 0 auto;
 }

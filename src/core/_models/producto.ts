@@ -1,10 +1,10 @@
 import { catalogo } from './catalogo';
 
 export class producto {
-  idProducto?: number;
+  id!: number;
   nombre?: string;
   precioUnitario?: number;
   descripcion?: string;
   existencias?: number;
-  catalogo?: catalogo[];
+  catalogoModel?: catalogo;
 }

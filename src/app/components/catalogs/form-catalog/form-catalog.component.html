@@ -1,0 +1,34 @@
+<section *ngIf="catalogo" class="section-catalogo">
+  <h2 class="title">Producto</h2>
+  <div class="form">
+    <div>
+      Nombre:
+      <input type="text" [(ngModel)]="catalogo.nombre" placeholder="nombre" />
+    </div>
+    <div>
+      Descripción:
+      <input
+        type="text"
+        [(ngModel)]="catalogo.descripcion"
+        placeholder="descripción"
+      />
+    </div>
+  </div>
+  <div class="btn-container">
+    <button
+      class="btn btn-update"
+      (click)="updateCatalogo(catalogo)"
+      *ngIf="catalogo.id"
+    >
+      Update
+    </button>
+    <button
+      class="btn btn-create"
+      (click)="createCatalogo(catalogo)"
+      *ngIf="!catalogo.id"
+    >
+      Create
+    </button>
+    <button class="btn btn-cancel" (click)="cancel()">Cancel</button>
+  </div>
+</section>

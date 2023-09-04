@@ -1,0 +1,74 @@
+.section-catalogo {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.btn-update {
+  background-color: #1d9732;
+}
+
+.btn-cancel {
+  background-color: #8c8c8c;
+}
+
+.btn-create {
+  background-color: #1f42a3;
+}
+
+.btn-update:hover {
+  background-color: #157d26;
+}
+
+.btn-cancel:hover {
+  background-color: #6a6969;
+}
+
+.btn-create:hover {
+  background-color: #102a71;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}

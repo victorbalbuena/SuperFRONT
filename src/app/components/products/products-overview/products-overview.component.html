@@ -1,3 +1,40 @@
 <section class="products">
-  <h2 class="title">Products</h2>
+  <h2 class="title">Productos</h2>
+
+  <!-- <div class="option">
+    <button class="btn-agregar" routerLink="/products/create">
+      Agregar producto
+    </button>
+  </div> -->
+
+  <div class="products-container">
+    <table class="products-table" id="customers">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio Unitario</th>
+          <th>Descripción</th>
+          <th>Existencias</th>
+          <th>Catálogo</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td (click)="editProducto(producto)">{{ producto.nombre }}</td>
+          <td>{{ producto.precioUnitario }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.existencias }}</td>
+          <td>{{ producto.catalogoModel?.nombre }}</td>
+          <td>
+            <button class="btn-eliminar" (click)="deleteProduct(producto.id)">
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-form-product [producto]="productoToEdit"></app-form-product>
 </section>
